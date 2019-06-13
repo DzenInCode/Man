@@ -1,12 +1,11 @@
 package MVC.Repos;
 import org.springframework.data.repository.CrudRepository;
 
-import MVC.ModelTeams;
-import java.util.List;
+import MVC.TeamModel;
 
 
-public interface TeamsRepository extends  CrudRepository <ModelTeams, Long>{
-    @Override
-    Iterable<ModelTeams> findAllById(Iterable<Long> iterable);
+public interface TeamsRepository extends  CrudRepository <TeamModel, Long>{
+//    @Override
+//    Iterable<TeamModel> findAllById(Iterable<Long> iterable);
 
 }

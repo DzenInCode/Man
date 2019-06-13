@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    image: "postgres:11-alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+  fm:
+    #image: "fm:latest"
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      - FM_DB_HOST=postgres

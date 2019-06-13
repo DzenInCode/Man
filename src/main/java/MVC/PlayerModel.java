@@ -1,14 +1,13 @@
 package MVC;
 
 import javax.persistence.*;
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 @Entity
-public class ModelPlayers {
+public class PlayerModel {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long player;
+    private Long id;
     @Column
     private  String name;
     @Column
@@ -19,13 +18,13 @@ public class ModelPlayers {
     private  String position;
 
     @ManyToOne
-    @JoinColumn(name = "team_id")
-    private  ModelTeams team;
+    @JoinColumn(name = "team_id", referencedColumnName = "id")
+    private TeamModel team;
 
-    public ModelPlayers() {
+    public PlayerModel() {
     }
 
-    public ModelPlayers(String name, String last_name, Date birthday, String position, ModelTeams team) {
+    public PlayerModel(String name, String last_name, Date birthday, String position, TeamModel team) {
         this.name = name;
         this.last_name = last_name;
         this.birthday = birthday;
@@ -34,8 +33,8 @@ public class ModelPlayers {
     }
 
 
-    public Long getPlayer() {
-        return player;
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
@@ -50,12 +49,12 @@ public class ModelPlayers {
         return birthday;
     }
 
-    public ModelTeams getTeam() {
+    public TeamModel getTeam() {
         return team;
     }
 
-    public void setPlayer(Long player) {
-        this.player = player;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setNames(String name) {
@@ -70,7 +69,7 @@ public class ModelPlayers {
         this.birthday = birthday;
     }
 
-    public void setTeam(ModelTeams team) {
+    public void setTeam(TeamModel team) {
         this.team = team;
     }
 }

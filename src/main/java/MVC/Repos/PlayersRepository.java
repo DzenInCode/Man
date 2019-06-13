@@ -2,9 +2,9 @@ package MVC.Repos;
 
 import org.springframework.data.repository.CrudRepository;
 
-import MVC.ModelPlayers;
+import MVC.PlayerModel;
 
 
-public interface PlayersRepository extends CrudRepository<ModelPlayers,Long>{
+public interface PlayersRepository extends CrudRepository<PlayerModel,Long>{
 
 }

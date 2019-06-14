@@ -1,0 +1,6 @@
+ показати всі команди
+http://localhost:8080/api/v1/show_teams
+ показати всіх гравців
+  http://localhost:8080/api/v1/show_players
+ створити команду
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Dinamo"}' "http://localhost:8080/api/v1/teams"

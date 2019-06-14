@@ -14,15 +14,17 @@ public class TeamModel {
 
 
     @OneToOne
-    @JoinColumn(name = "capitan_id"  )
+    @JoinColumn(name = "capitan_id", referencedColumnName = "id"  )
     private PlayerModel capitan;
 
+    @OneToMany(mappedBy = "team")
+    private List<PlayerModel> players;
 
     public TeamModel() {
     }
 
     @OneToMany(mappedBy = "team")
-    private List<PlayerModel> players;
+    private List<PlayerModel> playersInTeam;
 
     public List<PlayerModel> getPlayers() {
         return players;

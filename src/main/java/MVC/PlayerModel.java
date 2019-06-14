@@ -18,7 +18,7 @@ public class PlayerModel {
     private  String position;
 
     @ManyToOne
-    @JoinColumn(name = "team_id", referencedColumnName = "id")
+    @JoinColumn(name = "team_id")
     private TeamModel team;
 
     public PlayerModel() {
@@ -57,7 +57,7 @@ public class PlayerModel {
         this.id = id;
     }
 
-    public void setNames(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

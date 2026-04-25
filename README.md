@@ -1,13 +1,14 @@
-# Man
-This is the REST API service on Java Spring JPA with PostreSQL database.
-Service provide  basic CRUD methods to managing football teams and players.
+# Football Manager REST API (Spring Boot)
 
-instruction:
+University coursework, 2019. REST service for managing football teams and players.
 
-download the repository
+**Stack:** Java · Spring Boot 2.1 · Spring Data JPA · PostgreSQL · Thymeleaf · Maven · Docker Compose.
 
-use maven to create a jar file
+**Run:**
 
-run * docker-compose up *
+```bash
+mvn package
+docker-compose up
+```
 
-ready to use)
+**Status:** archived learning artifact, not maintained.
